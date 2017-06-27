@@ -18,6 +18,6 @@ public class MoverOeste implements Movimento
 
     
     public void movimentarSubmarino(Submarino submarino) {
-        submarino.minusY();
+        submarino.minusX();
     }
 }

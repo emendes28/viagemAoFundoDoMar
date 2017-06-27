@@ -11,7 +11,7 @@ public class Esquerda implements Girar
     
     
      public void girar(Submarino submarino){
-       submarino.getDirecao().getEsquerda();
+       submarino.setDirecao(submarino.getDirecao().getEsquerda());
    }
     
     

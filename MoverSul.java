@@ -17,6 +17,6 @@ public class MoverSul implements Movimento
 
     
     public void movimentarSubmarino(Submarino submarino) {
-        submarino.minusX();
+        submarino.minusY();
     }
 }

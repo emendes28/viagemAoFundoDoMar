@@ -18,6 +18,6 @@ public class Mover implements Movimento
 
     
     public void movimentarSubmarino(Submarino submarino) {
-      
+       submarino.getDirecao().getMovimento().movimentarSubmarino(submarino);
     }
 }

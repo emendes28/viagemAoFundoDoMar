@@ -11,7 +11,7 @@ import java.util.Optional;
  */
 public enum Comando
 {
-    L(new Direita()),R(new Esquerda()),M(new Mover()),U(new Subir()),D(new Descer());
+    L(new Esquerda()),R(new Direita()),M(new Mover()),U(new Subir()),D(new Descer());
     
     private Movimento movimento;
     
