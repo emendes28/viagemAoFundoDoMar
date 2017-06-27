@@ -1,6 +1,10 @@
+package movimento;
+
+import entidade.Submarino;
+
 
 /**
- * Escreva a descrição da classe MoverNorte aqui.
+ * Classe a ser aplicada no enum de direção Norte 
  * 
  * @author Evandro Mendes
  * @version 1.0.0 27/06/2017

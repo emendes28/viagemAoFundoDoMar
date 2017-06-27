@@ -1,3 +1,8 @@
+package direcao;
+
+import entidade.Submarino;
+import movimento.Movimento;
+
 
 /**
  * class Descer

@@ -1,6 +1,10 @@
+package movimento;
+
+import entidade.Submarino;
+
 
 /**
- * Escreva a descrição da classe MoverLeste aqui.
+ * Classe a ser aplicada no enum de direção Leste
  * 
  *
  * @author Evandro Mendes

@@ -1,12 +1,22 @@
+package enuns;
+
+import movimento.MoverNorte;
+import movimento.MoverOeste;
+import movimento.MoverLeste;
+import movimento.MoverSul;
+import movimento.Movimento;
+
 
 /**
  * Enumeration class Direcao 
  * Direcao do submarino
- *
+ * Com o movimento como contrutor 
+ * e a sua direção correspondente
+ * 
  * @author Evandro Mendes
  * @version 1.0.0 26/06/2017
  */
-enum Direcao
+public enum Direcao
     {
         NORTE(new MoverNorte()), SUL(new MoverSul()),LESTE(new MoverLeste()),OESTE(new MoverOeste());
         
@@ -31,24 +41,15 @@ enum Direcao
             this.movimento = movimento;
         }
 
-        /**
-         * @return the esquerda
-         */
         public Direcao getEsquerda() {
             return esquerda;
         }
 
-        /**
-         * @return the direita
-         */
         public Direcao getDireita() {
             return direita;
         }
         
-        
-        /**
-         * @return the a quantidade de movimento
-         */
+    
         public Movimento getMovimento() {
             return movimento;
         }

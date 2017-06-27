@@ -1,8 +1,11 @@
+package entidade;
+
+import enuns.Direcao;
 
 /**
  * class Submarino
  * 
- * Entity of bussiness
+ * Entidade Central do negócio
  *
  * @author Evandro Mendes
  * @version 1.0.0 26/06/2016
@@ -18,8 +21,7 @@ public class Submarino
     private Direcao direcao;       
 
     /**
-     * Constructor for objects of class Submarino 
-     * with position
+     * Construtor do submarino com a sua localização e direção
      */
     public Submarino(int x, int y, int z, Direcao direcao)
     {
@@ -30,7 +32,7 @@ public class Submarino
     }
 
     /**
-     * The method return position of Submarine
+     * Retorna a posição do submarino
      *
      * @return  the position 
      */
@@ -38,28 +40,40 @@ public class Submarino
     {
         return String.format("%d %d %d %s",x,y,z,direcao.toString());
     }
-    
+    /**
+    * Incrementa x + 1 a cada invocação
+    */
     public void addX(){
         this.x++;
     }  
-    
+    /**
+    * Decrementa x + 1 a cada invocação
+    */
     public void minusX(){
         this.x--;
     } 
-        
+    /**
+    * Incrementa y + 1 a cada invocação
+    */  
     public void addY(){
         this.y++;
     }  
-    
+     /**
+    * Decrementa y + 1 a cada invocação
+    */
     public void minusY(){
         this.y--;
     }   
     
-    
+     /**
+    * Incrementa z + 1 a cada invocação
+    */
     public void addZ(){
         this.z++;
     }  
-    
+    /**
+    * Decrementa z + 1 a cada invocação
+    */
     public void minusZ(){
         this.z--;
     }  

@@ -1,6 +1,12 @@
+package direcao;
+
+import entidade.Submarino;
+
 
 /**
- * Write a description of class Direita here.
+ * Classe de direita para resolver a entrada 
+ * de comando e implementar a interface Girar 
+ * para setar a direção no objeto submarino
  *
  *
  * @author Evandro Mendes

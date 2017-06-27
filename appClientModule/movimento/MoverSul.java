@@ -1,6 +1,10 @@
+package movimento;
+
+import entidade.Submarino;
+
 
 /**
- * Escreva a descrição da classe MoverSul aqui.
+ * Classe a ser aplicada no enum de direção Sul
  * 
  * @author Evandro Mendes
  * @version 1.0.0 27/06/2017
@@ -15,7 +19,11 @@ public class MoverSul implements Movimento
     {
     }
 
-    
+    /**
+    * Metodo que realiza o movimento do submarino no eixo Y
+    * 
+    * @param submarino uma instancia com um submarino
+    */
     public void movimentarSubmarino(Submarino submarino) {
         submarino.minusY();
     }

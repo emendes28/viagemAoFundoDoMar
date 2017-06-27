@@ -1,9 +1,14 @@
+package movimento;
+
+import entidade.Submarino;
+
 
 /**
- * Escreva a descrição da classe Mover aqui.
+ * Realiza o movimento a partir da entrada
  * 
- * @author (seu nome) 
- * @version (número de versão ou data)
+ * 
+ * @author Evandro Mendes
+ * @version 1.0.0 27/06/2017
  */
 public class Mover implements Movimento
 {
