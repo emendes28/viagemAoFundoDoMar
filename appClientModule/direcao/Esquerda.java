@@ -11,7 +11,7 @@ import entidade.Submarino;
  * @author Evandro Mendes
  * @version 1.0.0 26/06/2017
  */
-public class Esquerda implements Girar 
+public class Esquerda implements Giro 
 {
     
     

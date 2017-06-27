@@ -24,7 +24,7 @@ public class Entrada
         if(args.length > 0) {
             Optional<String> entrada = Optional.ofNullable(args[0]);
             entrada.ifPresent(c -> {
-                lacoLeitura:
+                entrada:
                 for(char comando : c.toCharArray()) {              
                     try {
                         switch(Comando.valueOf(String.valueOf(comando))) {
@@ -50,7 +50,7 @@ public class Entrada
 
                     } catch (IllegalArgumentException e) {
                         System.out.println(String.format("O comando %s é Inválido",entrada.get()));
-                        break lacoLeitura;
+                        break entrada;
                     }
                  }
 

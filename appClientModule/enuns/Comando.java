@@ -1,14 +1,14 @@
 package enuns;
 
 
-import movimento.Mover;
-import direcao.Descer;
-import direcao.Subir;
+import movimento.ComandoMovimento;
+import direcao.Descida;
+import direcao.Subida;
 import direcao.Direita;
 import direcao.Esquerda;
-import direcao.Girar;
 import java.util.Optional;
 import movimento.Movimento;
+import direcao.Giro;
 
 
 /**
@@ -22,22 +22,22 @@ import movimento.Movimento;
  */
 public enum Comando
 {
-    L(new Esquerda()),R(new Direita()),M(new Mover()),U(new Subir()),D(new Descer());
+    L(new Esquerda()),R(new Direita()),M(new ComandoMovimento()),U(new Subida()),D(new Descida());
     
     private Movimento movimento;
     
-    private Girar giro;
+    private Giro giro;
     
     Comando(Movimento movimento){
         this.movimento = movimento;
     }
     
     
-    Comando(Girar giro){
+    Comando(Giro giro){
         this.giro = giro;
     }
 
-    public Optional<Girar> getGiro() {
+    public Optional<Giro> getGiro() {
         return Optional.ofNullable(giro);
     }
 

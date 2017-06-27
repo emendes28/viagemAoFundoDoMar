@@ -1,9 +1,9 @@
 package enuns;
 
-import movimento.MoverNorte;
-import movimento.MoverOeste;
-import movimento.MoverLeste;
-import movimento.MoverSul;
+import movimento.MovimentoNorte;
+import movimento.MovimentoOeste;
+import movimento.MovimentoLeste;
+import movimento.MovimentoSul;
 import movimento.Movimento;
 
 
@@ -18,7 +18,7 @@ import movimento.Movimento;
  */
 public enum Direcao
     {
-        NORTE(new MoverNorte()), SUL(new MoverSul()),LESTE(new MoverLeste()),OESTE(new MoverOeste());
+        NORTE(new MovimentoNorte()), SUL(new MovimentoSul()),LESTE(new MovimentoLeste()),OESTE(new MovimentoOeste());
         
         static {
             NORTE.esquerda = OESTE;
