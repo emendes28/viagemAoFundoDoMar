@@ -88,23 +88,14 @@ public class Submarino
     */
     public void descer(){
         this.z--;
-    }  
-    
-    public void setDirecao(Direcao direcao){
-        this.direcao = direcao;
-    }
-    
-    
-    public Direcao getDirecao(){
-        return direcao;
-    } 
+    }             
         
     public void girarDireita(){
-        this.direcao.getDireita();
+        this.direcao = this.direcao.getDireita();
     } 
         
     public void girarEsquerda(){
-        this.direcao.getEsquerda();
+        this.direcao =  this.direcao.getEsquerda();
     } 
     
       
