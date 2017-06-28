@@ -109,7 +109,7 @@ public class Submarino
     
       
     public void movimento(){
-        switch(this.getDirecao()) {
+        switch(this.direcao) {
             case LESTE:
                 movimentarLeste();
             break;
