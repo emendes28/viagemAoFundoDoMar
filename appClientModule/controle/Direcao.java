@@ -1,11 +1,4 @@
-package enuns;
-
-import movimento.MovimentoNorte;
-import movimento.MovimentoOeste;
-import movimento.MovimentoLeste;
-import movimento.MovimentoSul;
-import movimento.Movimento;
-
+package controle;
 
 /**
  * Enumeration class Direcao 
@@ -18,7 +11,7 @@ import movimento.Movimento;
  */
 public enum Direcao
     {
-        NORTE(new MovimentoNorte()), SUL(new MovimentoSul()),LESTE(new MovimentoLeste()),OESTE(new MovimentoOeste());
+        NORTE,SUL,LESTE,OESTE;
         
         static {
             NORTE.esquerda = OESTE;
@@ -35,11 +28,6 @@ public enum Direcao
         
         private Direcao direita;
        
-        private Movimento movimento;
-        
-        Direcao (Movimento movimento){
-            this.movimento = movimento;
-        }
 
         public Direcao getEsquerda() {
             return esquerda;
@@ -47,11 +35,6 @@ public enum Direcao
 
         public Direcao getDireita() {
             return direita;
-        }
-        
-    
-        public Movimento getMovimento() {
-            return movimento;
         }
         
     }

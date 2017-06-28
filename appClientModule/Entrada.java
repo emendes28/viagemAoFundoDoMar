@@ -1,8 +1,8 @@
 
 
 import entidade.Submarino;
-import enuns.Comando;
-import enuns.Direcao;
+import controle.Comando;
+import controle.Direcao;
 import java.util.Optional;
 
 /**
@@ -16,10 +16,6 @@ public class Entrada
 {
     private static Submarino submarino;
     
-    static {
-        submarino = new Submarino(0, 0, 0, Direcao.NORTE);
-    }
-    
     public static void main (String args[]){
         if(args.length > 0) {
             Optional<String> entrada = Optional.ofNullable(args[0]);
@@ -29,19 +25,19 @@ public class Entrada
                     try {
                         switch(Comando.valueOf(String.valueOf(comando))) {
                             case L:
-                                Comando.L.getGiro().ifPresent(g -> g.girar(submarino));
+                                submarino.girarEsquerda();
                                 break;
                             case R:
-                                Comando.R.getGiro().ifPresent(g -> g.girar(submarino));
+                                submarino.girarDireita();
                                 break;
                             case M:
-                                Comando.M.getMovimento().ifPresent(m -> m.movimentarSubmarino(submarino));
+                                submarino.movimento();
                                 break;
                             case U:
-                                Comando.U.getMovimento().ifPresent(m -> m.movimentarSubmarino(submarino));
+                                submarino.subir();
                                 break;
                             case D:
-                                Comando.D.getMovimento().ifPresent(m -> m.movimentarSubmarino(submarino));
+                                submarino.descer();
                                 break;
                             default:
                                 System.out.println(String.format("O comando %c é Invalido",comando));

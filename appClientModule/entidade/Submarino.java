@@ -1,6 +1,6 @@
 package entidade;
 
-import enuns.Direcao;
+import controle.Direcao;
 
 /**
  * class Submarino
@@ -12,6 +12,9 @@ import enuns.Direcao;
  */
 public class Submarino
 {
+    
+    private static Submarino INSTANCE = new Submarino(0, 0, 0, Direcao.NORTE);
+    
     private int x;
     
     private int y;
@@ -23,12 +26,19 @@ public class Submarino
     /**
      * Construtor do submarino com a sua localização e direção
      */
-    public Submarino(int x, int y, int z, Direcao direcao)
+    private Submarino(int x, int y, int z, Direcao direcao)
     {
         this.x = x;
         this.y = y;
         this.z = z;
         this.direcao = direcao;
+    }
+    
+    public static Submarino getInstance(){
+        if(null == INSTANCE) {
+            INSTANCE = new Submarino(0, 0, 0, Direcao.NORTE);
+        }
+        return INSTANCE;
     }
 
     /**
@@ -43,38 +53,40 @@ public class Submarino
     /**
     * Incrementa x + 1 a cada invocação
     */
-    public void addX(){
+    
+    private void movimentarLeste() {
         this.x++;
-    }  
+    } 
+    
     /**
     * Decrementa x + 1 a cada invocação
     */
-    public void minusX(){
+    private void movimentarOeste() {
         this.x--;
-    } 
+    }
     /**
     * Incrementa y + 1 a cada invocação
     */  
-    public void addY(){
+    private void movimentarNorte() {
         this.y++;
     }  
      /**
     * Decrementa y + 1 a cada invocação
     */
-    public void minusY(){
+    private void movimentarSul() {
         this.y--;
     }   
     
      /**
     * Incrementa z + 1 a cada invocação
     */
-    public void addZ(){
+    public void subir(){
         this.z++;
     }  
     /**
     * Decrementa z + 1 a cada invocação
     */
-    public void minusZ(){
+    public void descer(){
         this.z--;
     }  
     
@@ -86,5 +98,32 @@ public class Submarino
     public Direcao getDirecao(){
         return direcao;
     } 
+        
+    public void girarDireita(){
+        this.direcao.getDireita();
+    } 
+        
+    public void girarEsquerda(){
+        this.direcao.getEsquerda();
+    } 
+    
+      
+    public void movimento(){
+        switch(this.getDirecao()) {
+            case LESTE:
+                movimentarLeste();
+            break;
+            case NORTE:
+                movimentarNorte();
+            break;
+            case OESTE:
+                movimentarOeste();
+            break;
+            case SUL:
+                movimentarSul();
+            break;
+                   
+        }
+    }
     
 }
